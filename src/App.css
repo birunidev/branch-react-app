@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Inter";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #1976d2;
+  color: white;
+  padding: 30px 0px 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0px;
+  font-size: 32px;
+  font-weight: bold;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header .nav-items {
+  display: flex;
+  list-style-type: none;
+  padding: none;
+}
+.header .nav-items li {
+  margin-right: 30px;
+}
+.header .nav-items li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+.header .nav-items li a.active {
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header .btn-header {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 13px 20px;
+  transition: 0.4s ease;
+  border-radius: 10px;
+}
+.header .btn-header:hover {
+  background-color: white;
+  color: #1976d2;
+}
+.login-app {
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form {
+  background-color: white;
+  padding: 50px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+}
+.text-center {
+  text-align: center;
 }
