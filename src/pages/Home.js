@@ -10,10 +10,14 @@ export default function Home() {
     <div className="home-page">
       <Header activePage="Home" />
       <Box className="text-center mt-10">
-        <Typography className="font-bold " variant="h3">
+        <Typography
+          className="font-bold"
+          data-testid="welcome-text"
+          variant="h3"
+        >
           Welcome to my simple App
         </Typography>
-        <p className="mt-4 text-xl">
+        <p className="mt-4 text-xl" data-testid="authorized-text">
           {auth && user
             ? `You are logged in as ${user.employeeName}`
             : "You are not authorized"}

@@ -23,11 +23,19 @@ export default function Branch() {
       <Header activePage="Branch" />
       <Container maxWidth="xl">
         <Box my={4}>
-          <Typography variant="h3" className="font-bold">
+          <Typography
+            variant="h3"
+            data-testid="branch-title"
+            className="font-bold"
+          >
             Data Branch
           </Typography>
 
-          <BasicTable data={branches} loading={loading} />
+          <BasicTable
+            data-testid="table-component"
+            data={branches}
+            loading={loading}
+          />
         </Box>
       </Container>
     </div>

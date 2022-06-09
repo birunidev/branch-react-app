@@ -49,34 +49,43 @@ export default function Login() {
           <p>Please login using valid credential</p>
           <Box my={3}>
             <TextField
+              data-testid="input-username"
               id="username"
               style={{ width: "100%" }}
               variant="outlined"
               label="username"
               name="username"
+              placeholder="Username"
               value={formik.values.username}
               onChange={formik.handleChange}
             />
-            <p className="text-red-600">{formik.errors.username}</p>
+            <p className="text-red-600" data-testid="username-error">
+              {formik.errors.username}
+            </p>
           </Box>
           <Box my={3}>
             <TextField
               id="password"
+              data-testid="input-password"
               style={{ width: "100%" }}
               variant="outlined"
               label="Password"
               type="password"
+              placeholder="Password"
               name="password"
               value={formik.values.password}
               onChange={formik.handleChange}
             />
-            <p className="text-red-600">{formik.errors.password}</p>
+            <p className="text-red-600" data-testid="password-error">
+              {formik.errors.password}
+            </p>
           </Box>
 
           <Box my={2}>
             <Button
               type="submit"
               variant="contained"
+              data-testid="btn-submit"
               style={{ width: "100%", padding: 10 }}
             >
               SIGN IN TO MY ACCOUNT
