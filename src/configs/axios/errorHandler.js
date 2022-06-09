@@ -23,10 +23,10 @@ export default function errorHandler(error) {
             RefreshToken: refresh_token,
           })
           .then((res) => {
-            if (res.data.success) {
-              setAuthorizationHeader(res.data.token);
+            if (res.success) {
+              setAuthorizationHeader(res.token);
               localStorage.setItem("token", JSON.stringify("token"));
-              originalRequest.headers.authorization = `Bearer ${res.data.token}`;
+              originalRequest.headers.authorization = `Bearer ${res.token}`;
             } else {
               localStorage.removeItem("token");
               localStorage.removeItem("refresh_token");
